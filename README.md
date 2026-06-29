@@ -1,21 +1,18 @@
-# CS 250 Software Development Lifecycle
+# CS 255 System Analysis and Design Portfolio
 
-This repository contains my portfolio work from CS 250 at Southern New Hampshire University. The course focused on Agile and Scrum practices through the SNHU Travel project, where I rotated through different Scrum roles across the modules.
+This repo holds two artifacts from my CS 255 work on the DriverPass project: the Business Requirements Document from Project One and the System Design Document from Project Two. Together they show the full path from gathering what the client wanted to designing a system that actually meets it.
 
-## Final Artifact
+## Project Summary
+The client was DriverPass, a driver education company that runs classes, online practice tests, and on the road training. They wanted a web based system reachable from a browser, tablet, or phone so customers could reserve lessons and take DMV style practice tests, and so staff could manage reservations and packages. Big piece was secure role based access for customers, the secretary, the IT officer, and the owner, with admin controls the IT officer could use without pulling in a developer.
 
-The Sprint Review and Retrospective document is included in this repo. It pulls together the Agile and Scrum work I did throughout the course as Scrum Master, Product Owner, Tester, and Developer.
+## What I did well
+Turning a messy interview into a structured set of requirements, then carrying those straight through into the diagrams. The use case, sequence, and class diagrams all line up with the BRD instead of drifting off on their own. I do data collection software for a government job, so I think a lot about whether the next person can pick up the work after me. That carried over here. The docs are meant to be read by someone who wasn't in the room.
 
-## Reflection
+## One thing I'd revise
+The class diagram. It's solid on attributes but light on operations. If I went back I'd add the key methods to each class so it reads more implementation ready, not just a data model. I'd also drop in a couple of error or alternate paths on the sequence diagram, since right now it only shows the happy path and real systems fail in interesting ways.
 
-**How do I interpret user needs and implement them into a program? How does creating user stories help with this?**
+## Interpreting user needs
+I started from the owner and staff interview and pulled out what they actually needed, not what sounded cool. Online reservations, practice tests, role based logins, admin controls without a developer. Those became requirements, then the requirements drove the design. This matters because the user lives in the system every day. Miss a real need and you either get expensive rework or a system nobody uses.
 
-The way I learned to interpret user needs is by listening for what the user actually wants to accomplish, not just what they say on the surface. User stories help a lot with this because they force you to capture the who, what, and why in one short sentence. The "why" part is what really keeps the developer focused on real value instead of just building features. Acceptance criteria then translate that intent into something testable, so you know when you've actually solved the problem.
-
-**How do I approach developing programs? What Agile processes do I hope to incorporate into my future development work?**
-
-I want to keep working in short iterations with regular check-ins. Sprints make the work feel manageable instead of one giant deliverable hanging over you. The processes I plan to carry forward are sprint planning to set realistic goals, daily standups to surface blockers early, and retrospectives to actually improve instead of repeating the same mistakes. Backlog refinement is another one I see real value in, since a clean backlog makes everything downstream easier.
-
-**What does it mean to be a good team member in software development?**
-
-A good team member shows up consistently, communicates honestly, and cares about the team's success more than personal credit. That means being clear when you're stuck, asking questions instead of guessing, and helping teammates when you can. It also means being open to feedback in retrospectives without getting defensive. Software is a team sport, and the team only moves as fast as the slowest blocker, so removing friction for others is just as valuable as writing good code yourself.
+## How I approach design
+Requirements first. Figure out who the users are and what they need before touching any structure. Then model before building. Use cases to nail down who does what, then sequence and class diagrams to work out the flow and the structure. Going forward I'd keep leaning on UML to think before I code, and I'd validate requirements with the client early instead of finding out at the end that I built the wrong thing.
